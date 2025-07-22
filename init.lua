@@ -355,6 +355,13 @@ require('lazy').setup({
         { '<leader>s', group = '[S]earch' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>A', group = 'Add Cursor to All Matches' },
+        { '<leader>n', group = 'Add Cursor to Next Match' },
+        { '<leader>N', group = 'Add Cursor to Previous Match' },
+        { '<leader>s', group = 'Skip Next Match for Cursor' },
+        { '<leader>S', group = 'Skip Previous Match for Cursor' },
+        { '<leader><Down>', group = 'Add Cursor Below' },
+        { '<leader><Up>', group = 'Add Cursor Above' },
       },
     },
   },
@@ -483,6 +490,7 @@ require('lazy').setup({
       },
     },
   },
+
   {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
@@ -933,6 +941,7 @@ require('lazy').setup({
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
+
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
@@ -958,6 +967,7 @@ require('lazy').setup({
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   },
+
   {
     'jake-stewart/multicursor.nvim',
     branch = '1.0',
